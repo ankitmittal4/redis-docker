@@ -5,8 +5,6 @@ import { log } from "node:console";
 
 const app = express();
 
-
-// const redis = new Redis("redis://default:hffjazAdJfl53t73RaTnYwUlLSzrxIGJ@redis-18339.crce217.ap-south-1-1.ec2.cloud.redislabs.com:18339")
 const redis = new Redis(process.env.REDIS_URL || 'redis://localhost:6379')
 
 app.get('/redis', async (req, res) => {
